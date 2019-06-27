@@ -1,5 +1,6 @@
 import React, { Fragment, useContext } from 'react';
 import { IntlContext } from './IntlWrapper';
+import { FormattedMessage } from 'react-intl';
 
 export default function LanguageSwitch() {
   // Context.
@@ -7,8 +8,12 @@ export default function LanguageSwitch() {
 
   return (
     <Fragment>
-      <button onClick={switchToEnglish}>Switch to English</button>
-      <button onClick={switchToSpanish}>Switch to Spanish</button>
+      <button onClick={switchToEnglish}>
+        <FormattedMessage id="switch_to_english" />
+      </button>
+      <button onClick={switchToSpanish}>
+        <FormattedMessage id="switch_to_spanish" />
+      </button>
     </Fragment>
   );
 };
