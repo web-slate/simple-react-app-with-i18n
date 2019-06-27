@@ -1,15 +1,12 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { IntlProvider } from 'react-intl';
 
-import { addAppLocaleData, englishMessages } from "./localeData";
-addAppLocaleData();
-
+import { IntlWrapper } from "./components/IntlWrapper";
 import App from "./App";
 
 ReactDOM.render(
-  <IntlProvider defaultLocale="en" locale="en-US" messages={englishMessages} >
+  <IntlWrapper>
     <App country="India" />
-  </IntlProvider>,
+  </IntlWrapper>,
   document.getElementById("app-without-cli")
 );
